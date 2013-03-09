@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export DJANGO_SETTINGS_MODULE="neo4django.tests.test_settings"
+export DJANGO_SETTINGS_MODULE="mysite.settings"
 export NEO4J_PORT=7474
 DEFAULT_VERSION="1.8.2"
 export NEO4J_VERSION=$DEFAULT_VERSION
