@@ -1,8 +1,8 @@
 #!/bin/bash
 
 export DJANGO_SETTINGS_MODULE="neo4django.tests.test_settings"
-export NEO4J_PORT="7474"
-DEFAULT_VERSION="1.8.1"
+export NEO4J_PORT=7474
+DEFAULT_VERSION="1.8.2"
 export NEO4J_VERSION=$DEFAULT_VERSION
 neo4j stop || true
 VERSION=${1-$DEFAULT_VERSION}
@@ -10,7 +10,6 @@ DIR="neo4j-community-$VERSION"
 FILE="$DIR-unix.tar.gz"
 SERVER_PROPERTIES_FILE="lib/neo4j/conf/neo4j-server.properties"
 #set a default neo4j port if none has been set
-export NEO4J_PORT=7474
 
 if [[ ! -d lib/$DIR ]]; then
     wget http://dist.neo4j.org/$FILE
